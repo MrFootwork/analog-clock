@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// import SelectorStyle from '@/components/SelectorStyle.vue'
 import SelectorStyle from '@/components/SelectorStyle.vue'
 </script>
 
