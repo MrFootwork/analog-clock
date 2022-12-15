@@ -1,1 +1,5 @@
-@use 'mixins'
+@use 'mixins';
+
+* {
+  box-sizing: border-box;
+}
