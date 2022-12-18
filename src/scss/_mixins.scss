@@ -1,0 +1,12 @@
+@mixin setFrameSize {
+  @media (orientation: landscape) {
+    height: 70vh;
+    width : 70vh;
+
+  }
+
+  @media (orientation: portrait) {
+    height: 70vw;
+    width : 70vw;
+  }
+}

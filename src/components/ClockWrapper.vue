@@ -8,17 +8,54 @@
     <slot name="dial"></slot>
     <slot name="hands"></slot>
 
-    <img src="public/bg__btm-right.svg" alt="">
-    <img src="public/bg__left.svg" alt="">
-    <img src="public/bg__top-right.svg" alt="">
+    <img class="bg__image" id="bg__btm-right" src="public/bg__btm-right.svg" alt="">
+    <img class="bg__image" id="bg__left" src="public/bg__left.svg" alt="">
+    <img class="bg__image" id="bg__top-right" src="public/bg__top-right.svg" alt="">
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .wrapper {
-  background-color: white;
+  --bg_image_size: 20rem;
+  background-color: bisque;
   width: 100vw;
   height: 100vh;
-  /* FIXME add mixins for theming */
+
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: -20;
+
+  .bg__image {
+    width: var(--bg_image_size);
+    height: var(--bg_image_size);
+    z-index: -10;
+    filter: blur(2px);
+
+    &#bg__btm-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &#bg__left {
+      position: absolute;
+      left: 0;
+      bottom: 20vh;
+    }
+
+    &#bg__top-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+
+
+
 }
 </style>

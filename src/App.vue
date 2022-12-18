@@ -8,21 +8,20 @@ import ClockHands from '@/components/ClockHands.vue'
 
 <template>
 
-  <SelectorStyle />
-
+  <!-- <SelectorStyle /> -->
   <ClockWrapper>
 
-    <Template #frame>
+    <template #frame>
       <ClockFrame />
-    </Template>
+    </template>
 
-    <Template #dial>
+    <template #dial>
       <ClockDial />
-    </Template>
+    </template>
 
-    <Template #hands>
+    <template #hands>
       <ClockHands />
-    </Template>
+    </template>
 
   </ClockWrapper>
 

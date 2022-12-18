@@ -1,5 +1,7 @@
-@use 'mixins';
+// @use 'mixins';
 
-* {
+:root {
   box-sizing: border-box;
+  margin    : 0;
+  padding   : 0;
 }
