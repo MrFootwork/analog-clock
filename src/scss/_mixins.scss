@@ -1,12 +1,63 @@
-@mixin setFrameSize {
+@mixin setSize($size, $height: $size) {
   @media (orientation: landscape) {
-    height: 70vh;
-    width : 70vh;
+    width: calc(1vh * $size);
 
+    @if $height {
+      height: calc(1vh * $height);
+    }
+
+    @else {
+      height: calc(1vh * $size);
+    }
   }
 
   @media (orientation: portrait) {
-    height: 70vw;
-    width : 70vw;
+    width: calc(1vw * $size);
+
+    @if $height {
+      height: calc(1vw * $height);
+    }
+
+    @else {
+      height: calc(1vw * $size);
+    }
+  }
+}
+
+/// Mixin to place items on a circle
+/// sass full version https://css-tricks.com/snippets/sass/placing-items-circle/
+/// inspired by Ana Tudor's https://stackoverflow.com/a/12817454/13608849
+/// @author Kitty Giraudel
+/// @author Ana Tudor
+/// @param {Integer} $item-count - Number of items on the circle
+/// @param {Length} $circle-size - Large circle size
+/// @param {Length} $item-size - Single item size
+@mixin on-circle($item-count, $circle-size) {
+  padding      : 0;
+  border-radius: 50%;
+  list-style   : none;
+
+  >* {
+    top : 46%;
+    left: 48%;
+
+    $angle: (360 / $item-count);
+    $rot  : 0;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        @media (orientation: landscape) {
+          transform:
+            rotate($rot * 1deg) translate((1vh * $circle-size) / 2) rotate(90deg);
+        }
+
+        @media (orientation: portrait) {
+          transform:
+            rotate($rot * 1deg) translate((1vw * $circle-size) / 2) rotate(90deg);
+        }
+      }
+
+      $rot: $rot+$angle;
+    }
   }
 }
