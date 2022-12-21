@@ -13,7 +13,7 @@ cd dist
 echo > .nojekyll
 
 # if you are deploying to a custom domain
-# echo 'uhr.pandau.de' > CNAME
+echo 'uhr.pandau.de' > CNAME
 
 git init
 git checkout -B main
@@ -21,10 +21,10 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
+# git push -f git@github.com:MrFootwork/MrFootwork.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:MrFootwork/analog-clock.git main:gh-pages
+# git push -f git@github.com:MrFootwork/analog-clock.git main:gh-pages
 
 cd -
 
