@@ -37,6 +37,8 @@
     @include on-circle($item-count: 12, $circle-size: 60);
 
     .hour {
+      border-radius: 4px;
+
       @media (orientation: landscape) {
         translate: .3vh 1vh;
       }
