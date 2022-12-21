@@ -27,3 +27,8 @@ git commit -m 'deploy'
 git push -f git@github.com:MrFootwork/analog-clock.git main:gh-pages
 
 cd -
+
+# follow official vite guide
+# https://vitejs.dev/guide/static-deploy.html
+# use gh-pages package
+# https://www.npmjs.com/package/gh-pages
