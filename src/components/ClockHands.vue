@@ -54,19 +54,16 @@ watchEffect(() => {
 
   .hour {
     @include setHandSize($size: 24, $color: hwb(174 24% 36%));
-    // rotate: 120deg;
 
   }
 
   .minute {
     @include setHandSize($size: 39, $color: hwb(174 24% 36%));
-    rotate: 249deg;
 
   }
 
   .second {
     @include setHandSize($size: 39, $color: hsl(0, 100%, 40%));
-    rotate: 95deg;
 
   }
 
