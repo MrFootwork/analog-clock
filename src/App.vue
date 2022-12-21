@@ -8,7 +8,7 @@ import ClockHands from '@/components/ClockHands.vue'
 
 <template>
 
-  <SelectorStyle />
+  <!-- <SelectorStyle /> -->
   <ClockWrapper>
 
     <template #frame>
