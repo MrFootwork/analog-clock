@@ -8,9 +8,9 @@
     <slot name="dial"></slot>
     <slot name="hands"></slot>
 
-    <img class="bg__image" id="bg__btm-right" src="public/bg__btm-right.svg" alt="">
-    <img class="bg__image" id="bg__left" src="public/bg__left.svg" alt="">
-    <img class="bg__image" id="bg__top-right" src="public/bg__top-right.svg" alt="">
+    <img class="bg__image" id="bg__btm-right" src="/bg__btm-right.svg" alt="">
+    <img class="bg__image" id="bg__left" src="/bg__left.svg" alt="">
+    <img class="bg__image" id="bg__top-right" src="/bg__top-right.svg" alt="">
   </div>
 </template>
 

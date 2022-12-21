@@ -41,19 +41,19 @@
     top : 46%;
     left: 48%;
 
-    $angle: (360 / $item-count);
+    $angle: calc(360 / $item-count);
     $rot  : 0;
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
         @media (orientation: landscape) {
           transform:
-            rotate($rot * 1deg) translate((1vh * $circle-size) / 2) rotate(90deg);
+            rotate($rot * 1deg) translate(calc(1vh * $circle-size) / 2) rotate(90deg);
         }
 
         @media (orientation: portrait) {
           transform:
-            rotate($rot * 1deg) translate((1vw * $circle-size) / 2) rotate(90deg);
+            rotate($rot * 1deg) translate((calc(1vw * $circle-size) / 2)) rotate(90deg);
         }
       }
 
