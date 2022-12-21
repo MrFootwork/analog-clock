@@ -24,6 +24,30 @@
   }
 }
 
+@mixin handBase {
+  width        : 1px;
+  height       : 1px;
+  border-radius: 44%;
+}
+
+@mixin setHandSize($size, $color: black) {
+  @media (orientation: landscape) {
+    @include handBase;
+    translate    : 0 calc((-1vh * $size) / 3);
+    border-bottom: calc(1vh * $size) solid $color;
+    border-left  : calc((1vh * $size) / 15) solid transparent;
+    border-right : calc((1vh * $size) / 15) solid transparent;
+  }
+
+  @media (orientation: portrait) {
+    @include handBase;
+    translate    : 0 calc((-1vw * $size / 3));
+    border-bottom: calc(1vw * $size) solid $color;
+    border-left  : calc((1vw * $size) / 15) solid transparent;
+    border-right : calc((1vw * $size) / 15) solid transparent;
+  }
+}
+
 /// Mixin to place items on a circle
 /// sass full version https://css-tricks.com/snippets/sass/placing-items-circle/
 /// inspired by Ana Tudor's https://stackoverflow.com/a/12817454/13608849
