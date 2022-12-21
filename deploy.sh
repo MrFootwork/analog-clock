@@ -32,3 +32,5 @@ cd -
 # https://vitejs.dev/guide/static-deploy.html
 # use gh-pages package
 # https://www.npmjs.com/package/gh-pages
+# Spanish guy explaining everything
+# https://www.youtube.com/watch?v=UX4gvort2TU
