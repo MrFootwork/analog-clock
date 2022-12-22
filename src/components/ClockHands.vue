@@ -27,7 +27,7 @@ watchEffect(() => {
     hour.value = currentTime.getHours()
     minute.value = currentTime.getMinutes()
     second.value = currentTime.getSeconds()
-  }, 10)
+  }, 250)
 
 })
 
