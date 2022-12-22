@@ -41,7 +41,6 @@
 .wrapper {
   position: absolute;
   display: block;
-  font-family: 'Caveat', cursive;
 
   .dial.marks {
     background-color: white;
