@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watchEffect, ref, computed, reactive } from 'vue';
+import { watchEffect, ref, computed } from 'vue';
 
 const hour = ref(0)
 const minute = ref(0)
@@ -22,12 +22,12 @@ const degSecond = computed(() => {
 
 watchEffect(() => {
 
-  let timeRunning = setInterval(() => {
+  setInterval(() => {
     const currentTime = new Date()
     hour.value = currentTime.getHours()
     minute.value = currentTime.getMinutes()
     second.value = currentTime.getSeconds()
-  }, 100)
+  }, 10)
 
 })
 
@@ -51,20 +51,16 @@ watchEffect(() => {
   align-items: center;
   justify-content: center;
 
-
   .hour {
     @include setHandSize($size: 24, $color: hwb(174 24% 36%));
-
   }
 
   .minute {
     @include setHandSize($size: 39, $color: hwb(174 24% 36%));
-
   }
 
   .second {
     @include setHandSize($size: 39, $color: hsl(0, 100%, 40%));
-
   }
 
   .hand {

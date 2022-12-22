@@ -48,6 +48,16 @@
   }
 }
 
+@mixin setSizeFont($size) {
+  @media (orientation: landscape) {
+    font-size: 1vh * $size;
+  }
+
+  @media (orientation: portrait) {
+    font-size: 1vw * $size;
+  }
+}
+
 /// Mixin to place items on a circle
 /// sass full version https://css-tricks.com/snippets/sass/placing-items-circle/
 /// inspired by Ana Tudor's https://stackoverflow.com/a/12817454/13608849
@@ -56,10 +66,8 @@
 /// @param {Integer} $item-count - Number of items on the circle
 /// @param {Length} $circle-size - Large circle size
 /// @param {Length} $item-size - Single item size
-@mixin on-circle($item-count, $circle-size) {
-  padding      : 0;
+@mixin on-circle_marks($item-count, $circle-size) {
   border-radius: 50%;
-  list-style   : none;
 
   >* {
     top : 46%;
@@ -78,6 +86,35 @@
         @media (orientation: portrait) {
           transform:
             rotate($rot * 1deg) translate((calc((1vw * $circle-size) / 2))) rotate(90deg);
+        }
+      }
+
+      $rot: $rot+$angle;
+    }
+  }
+}
+
+@mixin on-circle_numbers($item-count, $circle-size) {
+  border-radius: 50%;
+
+  >* {
+    top : 42.5%;
+    left: 41%;
+
+    $angle           : calc(360 / $item-count);
+    $rot             : 0;
+    $order-correction: 60deg;
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        @media (orientation: landscape) {
+          transform:
+            rotate($rot * 1deg - $order-correction) translate(calc((.95vh * $circle-size) / 2)) rotate($rot * -1deg + $order-correction);
+        }
+
+        @media (orientation: portrait) {
+          transform:
+            rotate($rot * 1deg - $order-correction) translate(calc((.95vw * $circle-size) / 2)) rotate($rot * -1deg + $order-correction);
         }
       }
 
