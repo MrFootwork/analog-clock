@@ -38,6 +38,7 @@ watchEffect(() => {
     <div class="hand hour" :style="{ rotate: degHour + 'deg' }"></div>
     <div class="hand minute" :style="{ rotate: degMinute + 'deg' }"></div>
     <div class="hand second" :style="{ rotate: degSecond + 'deg' }"></div>
+    <div class="button"></div>
   </div>
 </template>
 
@@ -51,18 +52,6 @@ watchEffect(() => {
   align-items: center;
   justify-content: center;
 
-  .hour {
-    @include setSizeHand($size: 24, $color: hwb(174 24% 36%));
-  }
-
-  .minute {
-    @include setSizeHand($size: 39, $color: hwb(174 24% 36%));
-  }
-
-  .second {
-    @include setSizeHand($size: 39, $color: hsl(0, 100%, 40%));
-  }
-
   .hand {
     position: absolute;
     transform-origin: 50% 84%;
@@ -73,6 +62,42 @@ watchEffect(() => {
     // 4. add transition
     // transition: 1s ease-in-out;
 
+  }
+
+  .hour {
+    @include setSizeHand($size: 24, $color: hwb(174 24% 36%));
+  }
+
+  .minute {
+    @include setSizeHand($size: 39, $color: hwb(174 24% 36%));
+  }
+
+  .second {
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 15%;
+    transform-origin: 50% 0%;
+
+    @media (orientation: landscape) {
+      height: 32vh;
+      width: .5vh;
+      translate: 0 16.25vh;
+    }
+
+    @media (orientation: portrait) {
+      height: 32vw;
+      width: .5vw;
+      translate: 0 16.25vw;
+    }
+  }
+
+  .button {
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+    background-color: gold;
+    z-index: 10;
+    ;
   }
 }
 </style>
