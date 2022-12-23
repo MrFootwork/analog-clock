@@ -30,7 +30,7 @@
   border-radius: 44%;
 }
 
-@mixin setHandSize($size, $color: black) {
+@mixin setSizeHand($size, $color: black) {
   @media (orientation: landscape) {
     @include handBase;
     translate    : 0 calc((-1vh * $size) / 3);

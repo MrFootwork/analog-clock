@@ -52,15 +52,15 @@ watchEffect(() => {
   justify-content: center;
 
   .hour {
-    @include setHandSize($size: 24, $color: hwb(174 24% 36%));
+    @include setSizeHand($size: 24, $color: hwb(174 24% 36%));
   }
 
   .minute {
-    @include setHandSize($size: 39, $color: hwb(174 24% 36%));
+    @include setSizeHand($size: 39, $color: hwb(174 24% 36%));
   }
 
   .second {
-    @include setHandSize($size: 39, $color: hsl(0, 100%, 40%));
+    @include setSizeHand($size: 39, $color: hsl(0, 100%, 40%));
   }
 
   .hand {
