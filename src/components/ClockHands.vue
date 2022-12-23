@@ -73,8 +73,8 @@ watchEffect(() => {
   }
 
   .second {
-    background-color: red;
-    border: 1px solid red;
+    background-color: hsl(0, 100%, 40%);
+    border: 1px solid hsl(0, 100%, 40%);
     border-radius: 15%;
     transform-origin: 50% 0%;
 
