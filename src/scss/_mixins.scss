@@ -30,21 +30,21 @@
   border-radius: 44%;
 }
 
-@mixin setSizeHand($size, $color: black) {
+@mixin setSizeHand($size, $width, $color: black) {
   @media (orientation: landscape) {
     @include handBase;
     translate    : 0 calc((-1vh * $size) / 3);
     border-bottom: calc(1vh * $size) solid $color;
-    border-left  : calc((1vh * $size) / 15) solid transparent;
-    border-right : calc((1vh * $size) / 15) solid transparent;
+    border-left  : calc((1vh * $size + 1vh * $width) / 15) solid transparent;
+    border-right : calc((1vh * $size + 1vh * $width) / 15) solid transparent;
   }
 
   @media (orientation: portrait) {
     @include handBase;
     translate    : 0 calc((-1vw * $size / 3));
     border-bottom: calc(1vw * $size) solid $color;
-    border-left  : calc((1vw * $size) / 15) solid transparent;
-    border-right : calc((1vw * $size) / 15) solid transparent;
+    border-left  : calc((1vw * $size + 1vw * $width) / 15) solid transparent;
+    border-right : calc((1vw * $size + 1vw * $width) / 15) solid transparent;
   }
 }
 

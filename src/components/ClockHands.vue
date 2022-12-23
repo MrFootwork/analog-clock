@@ -65,11 +65,11 @@ watchEffect(() => {
   }
 
   .hour {
-    @include setSizeHand($size: 24, $color: hwb(174 24% 36%));
+    @include setSizeHand($size: 24, $width: 30, $color: hwb(174 24% 50%));
   }
 
   .minute {
-    @include setSizeHand($size: 39, $color: hwb(174 24% 36%));
+    @include setSizeHand($size: 39, $width: 0, $color: hwb(174 24% 36%));
   }
 
   .second {
