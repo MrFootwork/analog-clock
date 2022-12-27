@@ -76,18 +76,18 @@ watchEffect(() => {
     background-color: hsl(0, 100%, 40%);
     border: 1px solid hsl(0, 100%, 40%);
     border-radius: 15%;
-    transform-origin: 50% 0%;
+    transform-origin: 35% 100%;
 
     @media (orientation: landscape) {
       height: 32vh;
       width: .5vh;
-      translate: 0 16.25vh;
+      translate: 0 -16.25vh;
     }
 
     @media (orientation: portrait) {
       height: 32vw;
       width: .5vw;
-      translate: 0 16.25vw;
+      translate: 0 -16.25vw;
     }
   }
 
